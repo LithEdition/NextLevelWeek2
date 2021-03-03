@@ -1,6 +1,5 @@
 # NextLevelWeek2
 
-# next-level-week-2
 <p align="center">
 	<img src="https://github.com/RafaelGoulartB/proffy/blob/master/.github/logo.png" >
 </p>
