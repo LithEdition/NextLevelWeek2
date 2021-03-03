@@ -1,0 +1,131 @@
+:root {
+    font-size: 40%; /* modificar as medidas rem */
+}
+
+#page-landing {
+    background: var(--color-primary); /* mudar a cor de fundo */
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary); /* vai mudar a cor da fonte de todos os texto dentro do container */
+}
+
+.logo-container img{
+    height: 10rem; /* irá alterar o tamanho da altura do logo */
+}
+
+.logo-container {
+    text-align: center; /* alinhamento do texto*/
+    margin-bottom: 3.2rem;
+}
+
+.logo-container h2 {
+    font-weight: 500; /* irá diminuir o peso da fonte */
+    font-size: 3.6rem;
+    line-height: 4.6rem; /* altura da linha */
+    margin-top: 0.8rem; /* margin topo */
+}
+
+.hero-img {
+    width: 100%; /* largura que a imagem terá */
+}
+
+.buttons-container {
+    display: flex; /* colocará os elementos desse container um ao lado do outro */
+    justify-content: center; /* justify-content não funciona sem o display flex */
+    margin: 3.2rem, 0;
+}
+
+.buttons-container a {
+    width: 30rem; /* largura */
+    height: 10.4rem; /* altura */
+
+    border-radius: .8rem; /* arredonda as bordas da caixa */
+    margin-right: 1.6rem;
+
+    font: 700 2.4rem Archivo; /* peso da fonte/ tamanho da fonte/ tipo da fonte */
+
+    display: flex;
+    align-items: center; /* Funcionando em conjunto com o display flex */
+    justify-content: center; /* irá deixar todos os elementos no bem no meio da caixa "a"*/
+
+    text-decoration: none; /* irá desativar a decoração da caixa */
+
+    transition: background 0.2s;
+
+    color: var(--color-button-text); /* irá alterar a cor dessa caixa(botão) */
+}
+
+.buttons-container a img {
+    width: 4rem; 
+    margin-right: 2rem;
+}
+
+.buttons-container a.study {
+    background: var(--color-primary-lighter); /* irá alterar a cor da caixa de link (ou botão se preferir chama-lo assim)*/
+}
+
+.buttons-container a.study:hover { /* Hover: momento em que o usúario estiver com o mouse em cima do item */
+    background: var(--color-primary-light);
+}
+
+.buttons-container a.give-classes { 
+    background: var(--color-secondary); /* irá alterar a cor da caixa de link (ou botão se preferir chama-lo assim)*/
+    margin-right: 0;
+}
+
+.buttons-container a.give-classes:hover { /* Hover: momento em que o usúario estiver com o mouse em cima do item */
+    background: var(--color-secondary-dark);
+}
+
+.total-connections {
+    font-size: 1.8rem; /* tamanho da fonte */
+
+    /* Alinhando os elementos dessa classe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ----------------------------------- */
+}
+
+.total-connections img {
+    margin-left: 0.8rem;
+}
+
+/* @media () - é uma regra em css que só será aplicada, quando os padrões dentro dos parenteses for atendida */
+@media (min-width: 1100px) {
+    #page-landing #container {
+        max-width: 1100px; /* largura maxima */
+        display: grid; /* pagina será dividida em colunas */
+        grid-template-columns: 2fr 1fr 2fr; /* fr = frações */
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+        "proffy image image" 
+        "button button texting";
+        gap: 60px;
+    }
+    .logo-container {
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center;
+    }
+
+    .logo-container img {
+        height: 100%;
+    }
+
+    .hero-img {
+        grid-area: image;
+    }
+    
+    .buttons-container {
+        grid-area: button;
+        justify-content: flex-start; /* esse justify content irá sobrescrever o mesmo que foi definido na linha 35 */
+        margin: 0;
+    }
+    
+    .total-connections {
+        grid-area: texting;
+        justify-self: end;
+    }
+} 

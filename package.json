@@ -1,0 +1,19 @@
+{
+  "name": "nlw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "nunjucks": "^3.2.2",
+    "sequelize": "^6.3.5",
+    "sqlite-async": "^1.1.1"
+  }
+}
